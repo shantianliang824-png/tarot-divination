@@ -29,10 +29,21 @@
   <div class="spread-desc" id="spread-desc"></div>
 
   <div class="draw-area">
-    <button class="draw-btn" onclick="performReading()"><span class="icon">✦</span><span class="label">开始占卜</span></button>
+    <button class="draw-btn" onclick="startCarousel()"><span class="icon">✦</span><span class="label">开始占卜</span></button>
   </div>
 
-  <div class="cards-area">
+  <!-- 3D Carousel -->
+  <div class="carousel-section" id="carousel-section">
+    <div class="carousel-scene" id="carousel-scene">
+      <div class="carousel-stage" id="carousel-stage"></div>
+    </div>
+    <div class="selection-info" id="selection-info">请在牌圈中选择 <span class="count" id="selection-count">0</span> 张牌</div>
+    <div class="reveal-area">
+      <button class="reveal-btn" id="reveal-btn" onclick="revealSelected()">✦ 查看解读</button>
+    </div>
+  </div>
+
+  <div class="cards-area" id="cards-area">
     <div class="cards-grid" id="cards-grid"></div>
   </div>
 

@@ -9,60 +9,48 @@
 <body>
 
 <div class="container">
+  <div class="top-ornament">✦ ✦ ✦ ✦ ✦</div>
+
   <header>
-    <h1>✦ 塔罗占卜 ✦</h1>
+    <div class="star">✦ ✦ ✦ ✦ ✦ ✦ ✦</div>
+    <h1>✦ 塔罗占卜 <span class="dot">·</span></h1>
     <p>Tarot Divination</p>
+    <div class="divider-line"><span></span>✦<span></span></div>
   </header>
 
-  <!-- 牌阵选择 -->
   <div class="spread-selector">
-    <button class="spread-btn active" data-spread="single" onclick="selectSpread('single')">
-      单张占卜<span class="sub">Daily</span>
-    </button>
-    <button class="spread-btn" data-spread="three" onclick="selectSpread('three')">
-      三张牌阵<span class="sub">Past·Now·Future</span>
-    </button>
-    <button class="spread-btn" data-spread="celtic" onclick="selectSpread('celtic')">
-      凯尔特十字<span class="sub">Celtic Cross</span>
-    </button>
-    <button class="spread-btn" data-spread="love" onclick="selectSpread('love')">
-      爱情牌阵<span class="sub">Love</span>
-    </button>
-    <button class="spread-btn" data-spread="career" onclick="selectSpread('career')">
-      事业牌阵<span class="sub">Career</span>
-    </button>
+    <button class="spread-btn active" data-spread="single" onclick="selectSpread('single')">单张占卜<span class="sub">Daily</span></button>
+    <button class="spread-btn" data-spread="three" onclick="selectSpread('three')">三张牌阵<span class="sub">Past·Now·Future</span></button>
+    <button class="spread-btn" data-spread="celtic" onclick="selectSpread('celtic')">凯尔特十字<span class="sub">Celtic Cross</span></button>
+    <button class="spread-btn" data-spread="love" onclick="selectSpread('love')">爱情牌阵<span class="sub">Love</span></button>
+    <button class="spread-btn" data-spread="career" onclick="selectSpread('career')">事业牌阵<span class="sub">Career</span></button>
   </div>
 
   <div class="spread-desc" id="spread-desc"></div>
 
-  <!-- 抽牌 -->
   <div class="draw-area">
-    <button class="draw-btn" onclick="performReading()">✦ 开始占卜 ✦</button>
+    <button class="draw-btn" onclick="performReading()"><span class="icon">✦</span><span class="label">开始占卜</span></button>
   </div>
 
-  <!-- 卡片展示 -->
   <div class="cards-area">
-    <div class="cards-grid"></div>
+    <div class="cards-grid" id="cards-grid"></div>
   </div>
 
-  <!-- 解读结果 -->
   <div class="reading-result" id="reading-result">
     <h3>✦ 占卜解读 ✦</h3>
     <div id="reading-content"></div>
     <div class="reading-summary" id="reading-summary"></div>
   </div>
 
-  <!-- 历史记录 -->
   <div class="history-section">
     <h3>占卜记录</h3>
     <div id="history-list"></div>
     <button class="clear-history-btn" onclick="clearHistory()">清空记录</button>
   </div>
 
-  <footer>遵循内心，牌面自明</footer>
+  <footer><div class="ornament">✦ ✦ ✦ ✦ ✦</div>遵循内心，牌面自明</footer>
 </div>
 
-<!-- 卡片详情弹窗 -->
 <div class="modal-overlay" id="card-modal" onclick="if(event.target===this)closeModal()">
   <div class="modal" id="modal-body"></div>
 </div>
